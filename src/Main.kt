@@ -1,6 +1,17 @@
 var higherScope: String = "Higher scope"
 
 fun main() {
+    oopKotlin()
+    functionalKotlin()
+}
+
+fun oopKotlin(){
+    //notice kotlin does not use new
+    val practiceOOP = PracticeClasses()
+    practiceOOP.practiceWithObjects()
+}
+
+fun functionalKotlin() {
     //const can only be assigned at compile time
     //val can be assigned at runtime
     //var can be assigned at both
@@ -220,4 +231,12 @@ fun usingDefaultParameters() {
 
     //NOTE: It allows better way to handle the builder pattern in code
     //that is the pattern that does: Object.setThis().setThis()
+}
+
+fun elvisOperator(name:String?) {
+    val betterName = if (name != null) name else "no Name"
+    //is same as
+    val betterNameUsingElvisOperator = name ?: "no Name"
+    //because null checks are a constant operation that is annoying
+
 }
