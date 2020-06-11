@@ -1,14 +1,20 @@
 var higherScope: String = "Higher scope"
 
 fun main() {
-    oopKotlin()
+    classesAndKotlin()
     functionalKotlin()
+    interfacesAndKotlin()
 }
 
-fun oopKotlin(){
+fun classesAndKotlin(){
     //notice kotlin does not use new
     val practiceOOP = PracticeClasses()
     practiceOOP.practiceWithObjects()
+}
+
+fun interfacesAndKotlin() {
+    val workWithInterfaces = WorkingWithInterfacesInKotlin()
+    workWithInterfaces.workWithInterfaces()
 }
 
 fun functionalKotlin() {
